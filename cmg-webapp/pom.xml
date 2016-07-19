@@ -21,6 +21,7 @@
 
     <!-- option i - magnolia-empty-webapp -->
     <!-- Dependencies versions are already imported by parent pom. Requires "Option A" in the parent pom. -->
+    <!--
     <dependency>
       <groupId>info.magnolia</groupId>
       <artifactId>magnolia-empty-webapp</artifactId>
@@ -31,7 +32,7 @@
       <artifactId>magnolia-empty-webapp</artifactId>
       <type>war</type>
     </dependency>
-
+-->
 
     <!-- option ii - magnolia-community-webapp -->
     <!-- Dependencies versions are already imported by parent pom. Requires "Option A" in the parent pom. -->
@@ -67,18 +68,20 @@
 
     <!-- option iv - magnolia-enterprise-pro-webapp -->
     <!-- Dependencies versions are already imported by parent pom. Requires "Option B" in the parent pom. -->
-    <!--
+
     <dependency>
       <groupId>info.magnolia.eebundle</groupId>
-      <artifactId>magnolia-enterprise-pro-webapp</artifactId>
+      <artifactId>magnolia-enterprise-webapp</artifactId>
+      <version>5.4.7</version>
       <type>pom</type>
     </dependency>
     <dependency>
       <groupId>info.magnolia.eebundle</groupId>
-      <artifactId>magnolia-enterprise-pro-webapp</artifactId>
+      <artifactId>magnolia-enterprise-webapp</artifactId>
+      <version>5.4.7</version>
       <type>war</type>
     </dependency>
-    -->
+
 
   </dependencies>
 
