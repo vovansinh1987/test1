@@ -1,0 +1,10 @@
+templateScript: /cmg.cfyc/templates/pages/dummy-page.ftl
+renderType: freemarker
+visible: true
+dialog: cmg.cfyc:pages/dummy-page-properties
+areas:
+  main:
+    renderType: freemarker
+    availableComponents:
+      dummy-component:
+        id: cmg.cfyc:components/dummy-component

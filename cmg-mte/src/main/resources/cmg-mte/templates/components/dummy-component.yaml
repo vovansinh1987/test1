@@ -1,0 +1,2 @@
+templateScript: /cmg-mte/templates/components/dummy-component.ftl
+renderType: freemarker

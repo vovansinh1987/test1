@@ -1,0 +1,2 @@
+templateScript: /cmg.cfyc/templates/components/dummy-component.ftl
+renderType: freemarker
