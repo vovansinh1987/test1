@@ -8,7 +8,7 @@
   </parent>
   <groupId>com.cmg</groupId>
   <artifactId>cmg.cfyc</artifactId>
-  <version>1.0-SNAPSHOT</version>
+  <version>1.1.0-SNAPSHOT</version>
   <packaging>jar</packaging>
   <name>cmg.cfyc Magnolia Module</name>
   <!--
@@ -20,6 +20,16 @@
   </properties>
 
   <dependencies>
+    <dependency>
+      <groupId>info.magnolia.ui</groupId>
+      <artifactId>magnolia-ui-admincentral</artifactId>
+      <exclusions>
+        <exclusion>
+          <artifactId>jsoup</artifactId>
+          <groupId>org.jsoup</groupId>
+        </exclusion>
+      </exclusions>
+    </dependency>
     <dependency>
       <groupId>info.magnolia</groupId>
       <artifactId>magnolia-core</artifactId>

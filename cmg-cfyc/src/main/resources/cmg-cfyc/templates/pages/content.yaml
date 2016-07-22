@@ -1,0 +1,3 @@
+class: info.magnolia.templating.definition.PageTemplateDefinition
+renderType: site
+title: Content Template
