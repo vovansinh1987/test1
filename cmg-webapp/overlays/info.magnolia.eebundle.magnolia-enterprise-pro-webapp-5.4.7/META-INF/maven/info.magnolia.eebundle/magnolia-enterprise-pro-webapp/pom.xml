@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd ">
+  <modelVersion>4.0.0</modelVersion>
+  <parent>
+    <groupId>info.magnolia.eebundle</groupId>
+    <artifactId>magnolia-enterprise-bundle-parent</artifactId>
+    <version>5.4.7</version>
+    <relativePath>../pom.xml</relativePath>
+  </parent>
+  <artifactId>magnolia-enterprise-pro-webapp</artifactId>
+  <packaging>war</packaging>
+  <name>magnolia-enterprise-pro-webapp</name>
+  <description>Magnolia Enterprise Edition Pro pre-installed with several modules.</description>
+  <dependencies>
+    <dependency>
+      <groupId>info.magnolia.eebundle</groupId>
+      <artifactId>magnolia-enterprise-standard-webapp</artifactId>
+      <type>war</type>
+    </dependency>
+    <dependency>
+      <groupId>info.magnolia.eebundle</groupId>
+      <artifactId>magnolia-enterprise-standard-webapp</artifactId>
+      <type>pom</type>
+    </dependency>
+    <!-- Additional EE modules -->
+    <dependency>
+      <groupId>info.magnolia.eebundle</groupId>
+      <artifactId>magnolia-enterprise-pro-product-descriptor</artifactId>
+    </dependency>
+    <dependency>
+      <groupId>info.magnolia.multisite</groupId>
+      <artifactId>magnolia-module-multisite</artifactId>
+    </dependency>
+  </dependencies>
+
+  <build>
+    <plugins>
+      <plugin>
+        <groupId>org.codehaus.gmaven</groupId>
+        <artifactId>gmaven-plugin</artifactId>
+        <executions>
+          <execution>
+            <id>check-for-duplicates</id>
+            <phase>verify</phase>
+            <goals>
+              <goal>execute</goal>
+            </goals>
+            <configuration>
+              <providerSelection>1.5</providerSelection>
+              <properties>
+                <libdir>${project.build.directory}/${project.build.finalName}/WEB-INF/lib</libdir>
+              </properties>
+              <source>${project.basedir}/test/check_for_duplicates.groovy</source>
+            </configuration>
+          </execution>
+        </executions>
+      </plugin>
+    </plugins>
+  </build>
+</project>

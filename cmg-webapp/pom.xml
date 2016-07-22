@@ -4,7 +4,7 @@
   <parent>
     <groupId>com.cmg</groupId>
     <artifactId>cmg</artifactId>
-    <version>1.0.1</version>
+    <version>1.1.0-SNAPSHOT</version>
     <relativePath>../pom.xml</relativePath>
   </parent>
   <artifactId>cmg-webapp</artifactId>
@@ -72,17 +72,21 @@
     <dependency>
       <groupId>info.magnolia.eebundle</groupId>
       <artifactId>magnolia-enterprise-pro-webapp</artifactId>
-      <version>5.4.7</version>
+      <version>${magnoliaVersion}</version>
       <type>pom</type>
     </dependency>
     <dependency>
       <groupId>info.magnolia.eebundle</groupId>
       <artifactId>magnolia-enterprise-pro-webapp</artifactId>
-      <version>5.4.7</version>
+      <version>${magnoliaVersion}</version>
       <type>war</type>
     </dependency>
 
-
+    <dependency>
+      <artifactId>cmg-cfyc</artifactId>
+      <groupId>com.cmg</groupId>
+      <version>${projectVersion}</version>
+    </dependency>
   </dependencies>
 
   <build>
